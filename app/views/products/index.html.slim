@@ -1,0 +1,6 @@
+.contens
+  - @products.each do |product|
+    .content_post
+      = product.name
+    .content_post
+      %iframe{src: "https://www.youtube.com/embed/#{product.youtube_url[32..42]}",allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "315", width: "560"}
