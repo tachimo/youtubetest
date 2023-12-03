@@ -1,12 +1,12 @@
 .new-contents
   .new-contents_content
 
-      = form_with(model: @product, local: true) do |form|
-      contents-group
-        = form.label :name, "名前"
-        = form.text_field :name, placeholder: 'name'
+      = form_with model: @product, local: true do |f|
+        contents-group
+          = f.label :name, "名前"
+          = f.text_field :name, placeholder: 'name'
 
-      contents-group
-        = form.label :youtube_url, "YouTubeのURL"
-        = form.text_field :youtube_url, placeholder: 'youtube_url'
-      = f.submit '投稿する'
+        contents-group
+          = f.label :youtube_url, "YouTubeのURL"
+          = f.text_field :youtube_url, placeholder: 'youtube_url'
+        = f.submit '投稿する'
